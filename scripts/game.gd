@@ -12,8 +12,12 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	#QUIT GAME WITH ESC
+	if Input.is_action_just_pressed("esc"):
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		get_tree().quit()
+	pass
 
 func get_main():
 	return get_tree().get_root().get_node("main")
